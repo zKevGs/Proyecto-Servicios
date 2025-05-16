@@ -1,0 +1,250 @@
+
+/* importo otra hoja de estilos */
+
+@import url(./styles.css);
+
+/* globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  body{
+    background-color: var(--fondo);
+  }
+
+  /* nav */
+
+  .nav{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+  }
+.logo-principal{
+    height: 100px;
+    width: 100px;
+}
+/* coloco donde quiero los items del nav */
+.nav-items{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    margin-right: 850px;
+}
+
+.nav-items li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  /* coloca una linea abajo de los A */
+  .nav-items li a:hover {
+    text-decoration: underline;
+  }
+
+  /* main */
+
+.sobre-nosotros{
+    border: 4px solid var(--borde-negro);
+    border-radius: 8px;
+    margin: 80px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto-empresa, .imagen-empresa{
+    width: 50%;
+}
+.texto-empresa {
+    padding: 40px 20px; /* espacio arriba y abajo */
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+  }
+  .texto-empresa p {
+    margin-bottom: 20px; /* espacio entre líneas de texto */
+  }
+  .imagen-empresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imagen-empresa img {
+    max-width: 50%;
+    height: auto;
+  }
+
+/* card-container */
+
+.card-container{
+  margin: 100px;
+}
+
+
+  /* card 1*/
+
+  .Card-1{
+    border: 2px solid var(--borde-blanco);
+        width: 300px;
+        margin: 20px auto;
+        cursor: pointer;
+  }
+
+  .Card-1 .img-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Card-1 .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes llenen el contenedor */
+    transition: opacity 0.3s ease-in-out;
+  }
+  .Card-1 .img-hover {
+    opacity: 0;
+  }
+  .Card-1 .img-container:hover .img-hover {
+    opacity: 1;
+  }
+  .Card-1 .img-container:hover .img-normal {
+    opacity: 0;
+  }
+
+  /* card 2 */
+
+  .Card-2{
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--borde-blanco);
+    overflow: hidden;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+
+  .Card-2 .img-container2 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Card-2 .img-container2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes llenen el contenedor */
+    transition: opacity 0.3s ease-in-out;
+  }
+  .Card-2 .img-hover2 {
+    opacity: 0;
+  }
+  .Card-2 .img-container2:hover .img-hover2 {
+    opacity: 1;
+  }
+  .Card-2 .img-container2:hover .img-normal2 {
+    opacity: 0;
+  }
+
+  /* card 3 */
+
+  .Card-3{
+    border: 2px solid var(--borde-blanco);
+        width: 300px;           /* O el tamaño que necesites */
+        margin: 20px auto;      /* Centrado horizontal y margen vertical */
+        cursor: pointer;
+  }
+
+  .Card-3 .img-container3 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Card-3 .img-container3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 50px; /* espacio para el botón */
+    height: auto; /* que el alto dependa del contenido */
+    object-fit: cover; /* Asegura que las imágenes llenen el contenedor */
+    transition: opacity 0.3s ease-in-out;
+  }
+  .Card-3 .img-hover3 {
+    opacity: 0;
+  }
+  .Card-3 .img-container3:hover .img-hover3 {
+    opacity: 1;
+  }
+  .Card-3 .img-container3:hover .img-normal3 {
+    opacity: 0;
+  }
+
+  /* ajuste de las cards */
+
+  .card-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* sombra a los bordes de las cards */
+
+  .Card-1,
+  .Card-2,
+  .Card-3 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  .Card-1:hover,
+.Card-2:hover,
+.Card-3:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+  /* footer */
+
+.footer-container{
+  background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 0px 40px;
+}
+
+  .logo-whatsapp, .logo-instagram{
+
+    height: 30px;
+    width: 30px;
+}
+
+.derechos{
+  color: var(--secundary-color);
+}
+
+/* icono */
+
+.icono-ubicacion{
+  height: 40px;
+  width: 30px;
+}
+.ubicacion{
+  color: var(--secundary-color);
+}
