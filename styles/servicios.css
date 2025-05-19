@@ -1,4 +1,3 @@
-
 /* importo otra hoja de estilos */
 
 @import url(./styles.css);
@@ -15,7 +14,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--primary-color);  /* ojo: necesita fondo sólido */
+  background: var(--primary-color); 
 }
   body{
     background-color: var(--fondo);
@@ -89,11 +88,10 @@
   }
 
   /* main */
-
-.sobre-nosotros{
+.sobre-nuestro-servicio{
     border: 4px solid var(--borde-negro);
     border-radius: 8px;
-    margin: 80px;
+    margin: 100px;
     padding: 40px;
     display: flex;
     align-items: center;
@@ -103,13 +101,13 @@
     width: 50%;
 }
 .texto-empresa {
-    padding: 40px 20px;
+    padding: 40px 20px; /* espacio arriba y abajo */
     font-size: 18px;
     font-weight: bold;
     color: black;
   }
   .texto-empresa p {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* espacio entre líneas de texto */
   }
   .imagen-empresa {
     display: flex;
@@ -121,7 +119,7 @@
     height: auto;
   }
 
-/* card-container */
+  /* card-container */
 
 .card-container{
   margin: 100px;
@@ -233,29 +231,140 @@
     opacity: 0;
   }
 
+  /* card-4 */
+
+ .Card-4{
+    border: 2px solid var(--borde-blanco);
+        width: 300px;
+        margin: 20px auto;
+        cursor: pointer;
+  }
+
+  .Card-4 .img-container4 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Card-4 .img-container4 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .Card-4 .img-hover4 {
+    opacity: 0;
+  }
+  .Card-4 .img-container4:hover .img-hover4 {
+    opacity: 1;
+  }
+  .Card-4 .img-container4:hover .img-normal4 {
+    opacity: 0;
+  }
+
+
+  /* card-5 */
+
+   .Card-5{
+    border: 2px solid var(--borde-blanco);
+        width: 300px;
+        margin: 20px auto;
+        cursor: pointer;
+  }
+
+  .Card-5 .img-container5 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Card-5 .img-container5 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .Card-5 .img-hover5 {
+    opacity: 0;
+  }
+  .Card-5 .img-container5:hover .img-hover5 {
+    opacity: 1;
+  }
+  .Card-5 .img-container5:hover .img-normal5 {
+    opacity: 0;
+  }
+
+  /* card-6 */
+
+   .Card-6{
+    border: 2px solid var(--borde-blanco);
+        width: 300px;
+        margin: 20px auto;
+        cursor: pointer;
+  }
+
+  .Card-6 .img-container6 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Card-6 .img-container6 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /*el alto dependa del contenido */
+    object-fit: cover; /* Asegura que las imágenes llenen el contenedor */
+    transition: opacity 0.3s ease-in-out;
+  }
+  .Card-6 .img-hover6 {
+    opacity: 0;
+  }
+  .Card-6 .img-container6:hover .img-hover6 {
+    opacity: 1;
+  }
+  .Card-6 .img-container6:hover .img-normal6 {
+    opacity: 0;
+  }
+
   /* ajuste de las cards */
 
-  .card-container{
+  .Card-container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 100px;
   }
 
   /* sombra a los bordes de las cards */
 
   .Card-1,
   .Card-2,
-  .Card-3 {
+  .Card-3,
+  .Card-4,
+  .Card-5,
+  .Card-6 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+     margin-bottom: 50px;
   }
   .Card-1:hover,
 .Card-2:hover,
-.Card-3:hover {
+.Card-3:hover,
+.Card-4:hover,
+.Card-5:hover,
+.Card-6:hover  {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease;
 }
+
 
   /* footer */
 
@@ -287,7 +396,7 @@
 .ubicacion{
   color: var(--secundary-color);
 }
-/* Estilos para tablets */
+/* responsive tablets */
 @media (min-width: 773px) and (max-width: 1024px) {
   .nav {
     flex-direction: row;
@@ -307,13 +416,11 @@
     height: 90px;
     width: 90px;
   }
-
-  .sobre-nosotros {
-    flex-direction: column;
+  .sobre-nuestro-servicio{
+      flex-direction: column;
     margin: 40px;
     padding: 30px;
   }
-
   .texto-empresa, .imagen-empresa {
     width: 100%;
     text-align: center;
@@ -322,8 +429,7 @@
   .imagen-empresa img {
     max-width: 60%;
   }
-
-  .card-container {
+   .card-container {
     margin: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -335,7 +441,6 @@
     width: 45%;
   }
 }
-
 /* Responsive moviles */
 
 /* Esconde el checkbox */
@@ -351,8 +456,6 @@
   color: white;
   padding: 10px;
 }
-
-/* responsive mobile */
 @media screen and (max-width: 768px) {
   .nav {
     flex-direction: column;
@@ -389,7 +492,7 @@
     width: 70px;
   }
 
-  .sobre-nosotros {
+  .sobre-nuestro-servicio {
     flex-direction: column;
     margin: 20px;
     padding: 20px;
